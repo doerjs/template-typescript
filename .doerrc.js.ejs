@@ -13,9 +13,9 @@ module.exports = {
   browserHistory: false,
 
   plugins: [
-    '<%= packages.pluginTypescript.name %>',
-    <% if (answers.style === 'less') { %>
-    '<%= packages.pluginLess.name %>',
+    '<%= packages['@doerjs/plugin-typescript'].name %>',
+    <% if (config.style === 'less') { %>
+    '<%= packages['@doerjs/plugin-less'].name %>',
     <% } %>
   ],
 

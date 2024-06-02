@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "<%= answers.name %>",
+  "name": "<%= config.name %>",
   "version": "0.0.0",
   "scripts": {
     "preinstall": "npx husky install",
@@ -20,12 +20,12 @@
   "devDependencies": {
     "@babel/runtime": "^7.16.7",
     "@babel/runtime-corejs3": "^7.16.7",
-    "<%= packages.cli.name %>": "<%= packages.cli.version %>",
-    "<%= packages.eslint.name %>": "<%= packages.eslint.version %>",
-    "<%= packages.prettier.name %>": "<%= packages.prettier.version %>",
-    "<%= packages.pluginTypescript.name %>": "<%= packages.pluginTypescript.version %>",
-    <% if (answers.style === 'less') { %>
-    "<%= packages.pluginLess.name %>": "<%= packages.pluginLess.version %>",
+    "<%= packages['@doerjs/cli'].name %>": "<%= packages['@doerjs/cli'].version %>",
+    "<%= packages['@doerjs/eslint-config'].name %>": "<%= packages['@doerjs/eslint-config'].version %>",
+    "<%= packages['@doerjs/prettier-config'].name %>": "<%= packages['@doerjs/prettier-config'].version %>",
+    "<%= packages['@doerjs/plugin-typescript'].name %>": "<%= packages['@doerjs/plugin-typescript'].version %>",
+    <% if (config.style === 'less') { %>
+    "<%= packages['@doerjs/plugin-less'].name %>": "<%= packages['@doerjs/plugin-less'].version %>",
     <% } %>
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
